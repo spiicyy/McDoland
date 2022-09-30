@@ -1,0 +1,280 @@
+@import url(//db.onlinewebfonts.com/c/827d075b1538829cc0db75696e4d5fa2?family=Speedee);
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Speedee";
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.header {
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+  margin-left: 25px;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #da291c;
+}
+
+.header i {
+  color: #ffc72c;
+}
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+  padding: 10px 50px;
+}
+
+.navbar .list-item {
+  display: inline-block;
+}
+
+.header .navbar a {
+  font-size: 1.2rem;
+  color: black;
+  margin-left: 2rem;
+}
+
+.header .navbar a:hover {
+  color: #ffc72c;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: black;
+  display: none;
+}
+
+.home {
+  padding: 0;
+}
+
+.slides {
+  position: relative;
+}
+
+.slide-cont {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 730px;
+
+  position: relative;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #ebeaea;
+  position: absolute;
+  top: 50%;
+}
+
+.arrow:hover {
+  opacity: 90%;
+  transform: scale(1.5);
+  transition: ease-in-out 200ms;
+}
+
+#arrow-left {
+  left: 10px;
+
+  z-index: 99;
+}
+
+#arrow-right {
+  right: 10px;
+}
+
+/* Slide image */
+.slide-cont:nth-of-type(1) {
+  background-image: url("../images/promo1.jpg");
+}
+
+.slide-cont:nth-of-type(2) {
+  background-image: url("../images/promo2.jpg");
+}
+
+.slide-cont:nth-of-type(3) {
+  background-image: url("../images/promo3.jpg");
+}
+
+.slide-cont:nth-of-type(4) {
+  background-image: url("../images/promo4.jpg");
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about-us .image {
+  flex: 1 1 41rem;
+}
+
+.about-us .image img {
+  width: 100%;
+}
+
+.about-us .content {
+  flex: 1 1 41rem;
+}
+
+.about-us .content .title {
+  font-size: 3rem;
+}
+
+.about-us .content p {
+  font-size: 1rem;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.about-us .content .icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-us .content .icons-container .icons {
+  flex: 1 1 16rem;
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 3rem 2rem;
+}
+
+.about-us .content .icons-container .icons img {
+  height: 7rem;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer .icons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+.footer .icons-container .icons {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.footer .icons-container .icons i {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background: whitesmoke;
+  color: #d89348;
+  margin-bottom: 1rem;
+  line-height: 5.7rem;
+  font-size: 2rem;
+}
+
+.footer .icons-container .icons h3 {
+  font-size: 2rem;
+  color: black;
+}
+
+.footer .media-social {
+  margin: 2rem 0;
+}
+
+.footer .media-social a {
+  height: 7rem;
+  width: 7rem;
+  line-height: 7rem;
+  color: white;
+  background: black;
+  margin: 0 0.3rem;
+  font-size: 2.5rem;
+}
+
+.footer .media-social a:hover {
+  background: grey;
+}
+
+.footer .credit {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1rem solid #aaa;
+  font-size: 1rem;
+}
+
+@media (max-width: 400px) {
+  .header .navbar {
+    position: fixed;
+    left: -100%;
+    top: 10%;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .navbar .list-item {
+    margin: 35px;
+  }
+
+  .header .navbar.active {
+    left: 0;
+    z-index: 1000;
+    background-color: whitesmoke;
+    position: fixed;
+    margin-top: 20px;
+  }
+
+  .header .navbar.active {
+    left: -20%;
+  }
+
+  #menu-btn {
+    display: inline-block;
+    margin-right: 40px;
+  }
+
+  #menu-btn {
+    display: inline-block;
+    margin-right: 40px;
+  }
+
+  .slide-cont {
+    height: 200px;
+    background-size: cover;
+  }
+
+  .about-us .content .icons-container .icons img {
+    height: 5rem;
+  }
+
+  .footer .icons-container .icons {
+    gap: 5rem;
+  }
+
+  .footer .media-social a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    color: white;
+    background: black;
+    margin: 2rem;
+    font-size: 1.5rem;
+  }
+}
